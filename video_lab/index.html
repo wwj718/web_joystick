@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+</head>
+<body>        
+
+<video id="Video1" controls="controls" >
+     <source src="pets.mp4" type="video/mp4" />
+     HTML5 Video is required for this example. 
+     <a href="demo.mp4">Download the video</a> file. 
+</video>
+
+<div id="buttonbar">
+    <button id="restart" onclick="restart();">[]</button> 
+    <button id="rew" onclick="skip(-10)">&lt;&lt;</button>
+    <button id="play" onclick="vidplay()">开始录制</button>
+    <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
+    <button id="get_currentTime" onclick="get_currentTime();">currentTime</button>
+</div>         
+
+<script type="text/javascript">
+
+    function vidplay() {
+       var video = document.getElementById("Video1");
+       var button = document.getElementById("play");
+       if (video.paused) {
+          video.play();
+          //这个瞬间把事件报告给后端
+          console.log({"video.currentTime":video.currentTime});
+          //button.textContent = "||";
+          button.textContent = "停止录制";
+       } else {
+          video.pause();
+          //button.textContent = ">";
+          button.textContent = "开始录制";
+       }
+    }
+
+    function restart() {
+        var video = document.getElementById("Video1");
+        video.currentTime = 0;
+    }
+
+    function skip(value) {
+        var video = document.getElementById("Video1");
+        video.currentTime += value;
+    }     
+
+
+    function get_currentTime(value) {
+        var video = document.getElementById("Video1");
+        alert(video.currentTime);
+    }
+
+
+    //放一个按钮开始录制
+</script>
+</body> 
+</html>
