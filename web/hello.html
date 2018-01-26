@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello, World!</title>
+        <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
+        <script type="text/javascript" src="/eel.js"></script>
+        <script type="text/javascript">
+        
+        eel.expose(py_console);               // Expose this function to Python
+        function py_console(content) {
+            //这个函数能被后端调用，意味着后台数据变化，能同步过来修改前台元素
+            console.log("Hello from " + content);
+        }
+        
+
+        async function call_get_key() {
+            let file_div = document.getElementById('key-down');
+            // Call into Python so we can access the file system
+            let r = await eel.get_key("test_wwj")();
+            window.r = r // debug
+            //console.log()
+            file_div.innerHTML = `${r.hello}`;
+        }
+        // say_hello_js("Javascript World!");
+
+        // eel.say_hello_py("Javascript World!");  // Call a Python function
+        
+        </script>
+    </head>
+    
+    <body>
+
+        <p>Hello, World!</p>
+        <a href='javascript:void()' onclick='call_get_key()'>触发py函数</a>
+        <div id='key-down'>---</div>
+
+        <script type="text/javascript">
+
+        </script>
+    </body>
+</html>
