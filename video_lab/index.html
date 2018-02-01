@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+  <script type="text/javascript" src="/eel.js"></script>
 </head>
 <body>        
 
@@ -24,13 +25,17 @@
        var video = document.getElementById("Video1");
        var button = document.getElementById("play");
        if (video.paused) {
+          //操作浏览器控制条 不触发  ps:这个特性正是需要的
           video.play();
+          eel.start_record(video.currentTime);
           //这个瞬间把事件报告给后端
           console.log({"video.currentTime":video.currentTime});
           //button.textContent = "||";
           button.textContent = "停止录制";
        } else {
           video.pause();
+          eel.stop_record(video.currentTime);
+          console.log({"video.currentTime":video.currentTime});
           //button.textContent = ">";
           button.textContent = "开始录制";
        }

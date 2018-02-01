@@ -23,3 +23,14 @@
 *  joystick一直运行，使用信号控制开始和结束，拿到这段时间的录制信息
     *  作为一个独立管道流过去
 *  后端返回之前阻塞前段页面 loading
+
+# 后端
+使用[asynchronous-python](https://github.com/ChrisKnott/Eel#asynchronous-python)
+
+用的是Gevent
+
+
+# todo
+### Q
+*  需要一个管道负责数据吗 console
+*  编程风格: js是异步，后端是阻塞还是异步
