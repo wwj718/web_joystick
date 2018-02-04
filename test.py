@@ -20,7 +20,7 @@ while True:
     axes = joystick.get_numaxes()
     for i in range( axes ):
     # pygame.joystick.Joystick.get_axis
-    # 选择你关心的选为元组
+    # 选择你关心的axes选为元组 (0,1)
       axis = joystick.get_axis( i )
       print("Axis {} value: {:>6.3f}".format(i, axis) )
 

@@ -25,7 +25,7 @@
        var video = document.getElementById("Video1");
        var button = document.getElementById("play");
        if (video.paused) {
-          //操作浏览器控制条 不触发  ps:这个特性正是需要的
+          //拖拽操作浏览器默认的control 不触发以下行为  ps:这个特性正是需要的
           video.play();
           eel.start_record(video.currentTime);
           //这个瞬间把事件报告给后端
@@ -57,8 +57,6 @@
         alert(video.currentTime);
     }
 
-
-    //放一个按钮开始录制
 </script>
 </body> 
 </html>

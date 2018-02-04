@@ -4,33 +4,33 @@
 *  mac
 *  python3.6.2
 
+# usage
+*  使用virtualenv创建虚拟环境
+*  安装依赖:`pip install -r requirements.txt`
+*  `python main.py`
 
 # 说明
 以[examples/01-hello-world](https://github.com/ChrisKnott/Eel/blob/master/examples/01%20-%20hello_world/hello.py)为脚手架
 
 
 # 原理
-使用websocket
+[Eel](https://github.com/ChrisKnott/Eel)使用websocket来连接js与python，使它们可以双向通信
 
-如果对实时性要求高 可以自行构建websocket
+本质是cs架构
 
 # 策略
-前后端只沟通信号，数据在后端打包发送
+目前该应用的数据流向是前端往后端发送信号(开始/结束录制，以及对应的视频时间)，数据在后端打包发送到云平台
 
-# todo
-*  使用键盘控制
-    *  提示开始
-*  joystick一直运行，使用信号控制开始和结束，拿到这段时间的录制信息
-    *  作为一个独立管道流过去
-*  后端返回之前阻塞前段页面 loading
 
 # 后端
-使用[asynchronous-python](https://github.com/ChrisKnott/Eel#asynchronous-python)
+使用[asynchronous-python](https://github.com/ChrisKnott/Eel#asynchronous-python)实现非阻塞模型
 
 用的是Gevent
 
 
 # todo
-### Q
+*  使用空格控制录制
+
+
+# Question
 *  需要一个管道负责数据吗 console
-*  编程风格: js是异步，后端是阻塞还是异步
