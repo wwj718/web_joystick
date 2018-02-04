@@ -8,6 +8,7 @@
 *  使用virtualenv创建虚拟环境
 *  安装依赖:`pip install -r requirements.txt`
 *  `python main.py`
+*  运行起来之后，点击chrome浏览器可看到界面
 
 # 说明
 以[examples/01-hello-world](https://github.com/ChrisKnott/Eel/blob/master/examples/01%20-%20hello_world/hello.py)为脚手架
