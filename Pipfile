@@ -7,9 +7,8 @@ name = "pypi"
 
 [packages]
 
-eel = "==0.8.0"
-pygame = "==1.9.3"
-bplustree = "*"
+Eel = "==0.8.0"
+Pygame = "==1.9.3"
 
 
 [dev-packages]

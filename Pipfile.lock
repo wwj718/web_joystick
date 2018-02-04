@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4978f04d5b628a0b315f108f507c32ea7ca1216cfd51818b921b23ccbb38e07b"
+            "sha256": "35d51b53de795318d982b0b2d3fc0161a1f97138164a25a65b56877e4b284435"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -38,20 +38,6 @@
                 "sha256:9887f70dc0c7592ed8d0d11a14aa95dede6cd08d50d83d5b81fd963e5fec738b"
             ],
             "version": "==0.2.9"
-        },
-        "bplustree": {
-            "hashes": [
-                "sha256:0d792438c1f2435b770e27f9c5be5153f6c5481a5285e6fda56487bd954f6471",
-                "sha256:53a2c820e7f1a444ac65d31834251dad2219d6aec6bc0853a32eb0fe40ea924d"
-            ],
-            "version": "==0.0.3"
-        },
-        "cachetools": {
-            "hashes": [
-                "sha256:4319bbb78172e7bcf99423e1ecd6914b32336ccfe97d2058ffe62e641a7f3abe",
-                "sha256:ede01f2d3cbd6ddc9e35e16c2b0ce011d8bb70ce0dbaf282f5b4df24b213bc5d"
-            ],
-            "version": "==2.0.1"
         },
         "eel": {
             "hashes": [
@@ -145,12 +131,6 @@
                 "sha256:751021819bdc0cbe5cbd51904abb6ff9e9aee5b0e8955af02284d0e77d6c9ec2"
             ],
             "version": "==1.9.3"
-        },
-        "rwlock": {
-            "hashes": [
-                "sha256:9eff5f1f5c72df6333948b9c4d434286ffb0c2986c9b9277081af1c3d09f3207"
-            ],
-            "version": "==0.0.7"
         }
     },
     "develop": {}
